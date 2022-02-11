@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>Who Represents Me?: Results</title>
+    </head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <body class="all">
+        <!--first div holds all text at top of page-->
+        <div class="parent">
+            <h2 class="logo">Who Represents Me</h2>
+            <h3 class="address">at {{ request.form.get("zipcode") }}?</h3>
+        </div>
+        <br>
+        <div>
+            <table class="diff">
+                <thead>
+                    <tr>
+                        <th>
+                            <!--links to page that corresponds with state of user zipcode-->
+                            <a class="info" href="https://www.vote411.org/{{ normal.state }}" target="_blank"> Click for voter registration and election info in {{ normal.state.replace("-", " ") }} </a>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <!--new div to hold table-->
+        <div class="child">
+            <table class="total">
+                <!--recreate the same structure populated with the same info for each official-->
+                {% for official in officials %}
+                <thead>
+                    <tr>
+                        <!--2-column wide header with name-->
+                        <th colspan="2"> {{ official.name }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ official.office }}</td>
+                        <td>{{ official.party }}</td>
+                    </tr>
+                    <tr>
+                        <!--digs into dictionary to retreive neatly formatted address-->
+                        <td>{{ official['geocodingSummaries'][0]['queryString'] }}</td>
+                        <!--_blank opens in new tab-->
+                        <td><a class="link" href="https://www.aclu.org/writing-your-elected-representatives" target="_blank">Click Me for tips on writing your elected official!</a></td>
+                    </tr>
+                    <tr>
+                        <!--first listed phone number-->
+                        <td> {{ official.phones[0] }}</td>
+                        <td>
+                            <a class="link" href="tel:{{ (official.phones[0])[0:14].replace(" ", "") }}">Click to Call your Elected Official</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <!--first email-->
+                        <td>{{ official.emails[0] }}</td>
+                        <td><a class="link" href="mailto: {{ official.emails[0] }}">Click to Email your Elected Official</a></td>
+                    </tr>
+                {% endfor %}
+                <!--loop terminates here-->
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

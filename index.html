@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>Who Represents Me?</title>
+    </head>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <body class="all">
+        <div class="parent">
+            <h2 class="logo">Who Represents Me?</h2>
+            <!--Form to input and submit zipcode-->
+            <form class="form" action="/results" method="POST">
+                <input class="zipcode" type="num" id="zipcode" name="zipcode" placeholder="Zip Code" autocomplete="off" autofocus>
+                <br>
+                <br>
+                <input class="submit" type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
+

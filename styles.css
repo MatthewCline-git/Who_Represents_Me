@@ -1,0 +1,143 @@
+.address {
+    font-size: 50px;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+.all {
+      background-image: url("https://www.hks.harvard.edu/sites/default/files/general_page/small_hero_image/Banner_political-buttons_LKS1_1280x720.jpg");
+      background-color: #011C53;
+      background-size: 150%;
+    }
+
+.child {
+    text-align:center;
+}
+
+.diff {
+    background-color:#F7FAFC;
+    margin: auto;
+    width: 80%;
+    border-radius:15px;
+    border-collapse: separate;
+    position: relative;
+    max-width: 700px;
+}
+
+.form {
+    text-align: center;
+}
+
+.header{
+    cursor:pointer;
+}
+
+html {
+    font-family: Georgia;
+}
+
+.info{
+    color: Black;
+    text-decoration: none;
+}
+
+.link{
+    color: inherit;
+}
+
+/*sets style for "Who represents me?"*/
+.logo {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: Georgia;
+    letter-spacing: 1px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black; 
+}
+
+.myButton{
+    padding: 30px;
+    color: white;
+    text-align:center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.parent{
+    color: white;
+    text-align: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    position: relative;
+}
+
+/*sets div attributes, keeps it in place, keeps it centered*/
+.parent_results {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 80%;
+}
+
+.submit {
+    background: white;
+    padding: 12px 20px;
+    font-family: Georgia;
+    color: gray;
+    border: 0;
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+table {
+    table-layout: fixed;
+    width: 75%;
+    border-collapse: collapse;
+}
+
+/*table body data is centered*/
+tbody td {
+    text-align: center;
+}
+
+td{
+    background-color:#F7FAFC;
+}
+
+th, td {
+    padding: 15px;
+}
+
+thead th {
+    text-align: center;
+}
+
+thead th:nth-child(1) {
+    width: 30%;
+}
+
+.total {
+    background-color:#FFFFFF;
+    margin: auto;
+    width: 80%;
+    border-radius:15px;
+    border-collapse: separate;
+    position: relative;
+    max-width: 700px;
+}
+
+.zipcode {
+    padding: 12px 20px;
+    /*https://www.w3schools.com/css/css3_box-sizing.asp*/
+    box-sizing: border-box;
+    font-family: Georgia;
+    text-align: center;
+    font-size: 18px;
+    border: 0;
+    border-radius: 6px;
+}
